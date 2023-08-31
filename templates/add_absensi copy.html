@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Add Record{% endblock %}
+{% block content %}
+    <h1>Add New Attendance Record</h1>
+    <form action="/absensi/add" method="post" class="form-group">
+        <label for="nama">Name:</label>
+        <input type="text" name="nama" class="form-control"><br>
+        
+        <label for="tanggal">Date:</label>
+        <input type="date" name="tanggal" class="form-control"><br>
+        
+        <label for="status">Status:</label>
+        <select name="status" class="form-control">
+            <option value="sakit">Sick</option>
+            <option value="alpa">Absent</option>
+            <option value="izin">Permission</option>
+        </select><br>
+        
+        <input type="submit" value="Add" class="btn btn-primary">
+    </form>
+{% endblock %}

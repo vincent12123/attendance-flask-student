@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Edit Record{% endblock %}
+{% block content %}
+    <h1>Edit Attendance Record</h1>
+    <form action="/absensi/update/{{ record.id }}" method="post" class="form-group">
+        <label for="nama">Name:</label>
+        <input type="text" name="nama" value="{{ record.nama }}" class="form-control"><br>
+        
+        <label for="tanggal">Date:</label>
+        <input type="date" name="tanggal" value="{{ record.tanggal }}" class="form-control"><br>
+        
+        <label for="status">Status:</label>
+        <select name="status" class="form-control">
+            <option value="sakit" {% if record.status == "sakit" %}selected{% endif %}>Sick</option>
+            <option value="alpa" {% if record.status == "alpa" %}selected{% endif %}>Absent</option>
+            <option value="izin" {% if record.status == "izin" %}selected{% endif %}>Permission</option>
+        </select><br>
+        
+        <input type="submit" value="Update" class="btn btn-primary">
+    </form>
+{% endblock %}

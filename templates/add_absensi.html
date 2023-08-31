@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Add Record{% endblock %}
+{% block content %}
+    <h1>Add New Attendance Record</h1>
+    <form action="/absensi/add" method="post" class="form-group">
+        <label for="nama">Name:</label>
+        <select name="nama" class="form-control">
+            <option value="Aldi">Aldi</option>
+            <option value="Ameliana Visilia">Ameliana Visilia</option>
+            <option value="Aztri Aditia Imel">Aztri Aditia Imel</option>
+            <option value="Cantika Putri">Cantika Putri</option>
+            <option value="Clara Anastasya">Clara Anastasya</option>
+            <option value="Dewi Kuswati">Dewi Kuswati</option>
+            <option value="Dheca Atmi Sri">Dheca Atmi Sri</option>
+            <option value="Dimas Septyoga">Dimas Septyoga</option>
+            <option value="Elda Lela">Elda Lela</option>
+            <option value="Elisabet Kornelia">Elisabet Kornelia</option>
+            <option value="Ezra Laurdesia Br. Siahaan">Ezra Laurdesia Br. Siahaan</option>
+            <option value="Faiq Akhmad Aysar">Faiq Akhmad Aysar</option>
+            <option value="Fannya Siciliawati">Fannya Siciliawati</option>
+            <option value="Hilario Putra Tarigas">Hilario Putra Tarigas</option>
+            <option value="Ipan">Ipan</option>
+            <option value="Lusia Siftiana">Lusia Siftiana</option>
+            <option value="Meilisa">Meilisa</option>
+            <option value="Nirmala Arini">Nirmala Arini</option>
+            <option value="Olivia">Olivia</option>
+            <option value="Rani Aryunnita">Rani Aryunnita</option>
+            <option value="Rina Kurniati">Rina Kurniati</option>
+            <option value="Rosetita Fredicia">Rosetita Fredicia</option>
+            <option value="Valenza Reihaldi Saputra">Valenza Reihaldi Saputra</option>
+            <option value="William Devlin Baskara">William Devlin Baskara</option>
+            <option value="Yunika Dwi Lestari">Yunika Dwi Lestari</option>
+          </select>
+          
+        
+        <label for="tanggal">Date:</label>
+        <input type="date" name="tanggal" class="form-control"><br>
+        
+        <label for="status">Status:</label>
+        <select name="status" class="form-control">
+            <option value="sakit">Sick</option>
+            <option value="alpa">Absent</option>
+            <option value="izin">Permission</option>
+        </select><br>
+        
+        <input type="submit" value="Add" class="btn btn-primary">
+    </form>
+{% endblock %}

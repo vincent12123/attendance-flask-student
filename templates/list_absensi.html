@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Attendance Records{% endblock %}
+{% block content %}
+    <h1>Attendance Records</h1>
+    <a href="/absensi/add" class="btn btn-primary mb-3">Add New Record</a>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.id }}</td>
+                <td>{{ record.nama }}</td>
+                <td>{{ record.tanggal }}</td>
+                <td>{{ record.status }}</td>
+                <td>
+                    <a href="/absensi/update/{{ record.id }}" class="btn btn-info">Edit</a>
+                    <a href="/absensi/delete/{{ record.id }}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
