@@ -11,9 +11,10 @@
         
         <label for="status">Status:</label>
         <select name="status" class="form-control">
-            <option value="sakit" {% if record.status == "sakit" %}selected{% endif %}>Sick</option>
-            <option value="alpa" {% if record.status == "alpa" %}selected{% endif %}>Absent</option>
-            <option value="izin" {% if record.status == "izin" %}selected{% endif %}>Permission</option>
+            <option value="sakit" {% if record.status == "hadir" %}selected{% endif %}>Hadir</option>
+            <option value="alpa" {% if record.status == "sakit" %}selected{% endif %}>Sakit</option>
+            <option value="izin" {% if record.status == "izin" %}selected{% endif %}>Izin</option>
+            <option value="izin" {% if record.status == "alpa" %}selected{% endif %}>Alpa</option>
         </select><br>
         
         <input type="submit" value="Update" class="btn btn-primary">
